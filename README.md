@@ -18,4 +18,4 @@ Open Crontab:<br>
 Add the following into crontab and replace <...> with the WireGuard Server IP adress.<br> 
 ```* * * * * /root/monitor_wireguard_tunnel.sh <WIREGUARD SERVER IP>```<br>
 
-* * * * * runs the script at every minute. If you need to costumize it, check https://crontab.guru/
+"* * * * *" runs the script at every minute. If you need to costumize it, check https://crontab.guru/
