@@ -9,9 +9,11 @@ Switch user to root:<br>
 Clone this repository:<br>
 ```git clone https://github.com/rdnsx/CronServiceMon.git``` 
 
+Make it executeable:<br>
+```chmod +x monitor_wireguard_tunnel.sh```
+
 Open Crontab:<br>
 ```crontab -e```
-
 
 Add the following into crontab and replace <...> with the WireGuard Server IP adress.<br> 
 ```* * * * * /root/monitor_wireguard_tunnel.sh <WIREGUARD SERVER IP>```
