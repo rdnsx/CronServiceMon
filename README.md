@@ -5,7 +5,7 @@ Script to monitor a service like wireguard and start if not running.
 
 sudu su
 
-git clone
+git clone https://github.com/rdnsx/CronServiceMon.git 
 
 crontab -e
 
