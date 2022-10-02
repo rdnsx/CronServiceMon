@@ -11,8 +11,6 @@ echo "\e[1mUpdating system...\e[0m"
 echo 
 echo
 sleep 2
-
-#Update OS & clean
 apt update && apt upgrade -y && apt autoremove -y
 
 echo
@@ -21,8 +19,6 @@ echo "\e[1mInstalling WireGuard...\e[0m"
 echo 
 sleep 3
 echo
-
-#Install WireGuard
 apt install wireguard -y
 echo
 echo 
@@ -33,7 +29,6 @@ wg genkey | sudo tee /etc/wireguard/private.key
 sudo chmod go= /etc/wireguard/private.key
 sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public.key
 
-#Copy wg-quick config
 cp wg0.conf /etc/wireguard/
 
 # Promts to enter Wireguard client IP and inserts it to wg0.conf line 3
