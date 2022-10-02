@@ -33,9 +33,6 @@ wg genkey | sudo tee /etc/wireguard/private.key
 sudo chmod go= /etc/wireguard/private.key
 sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public.key
 
-#Enable Wirequard
-systemctl enable wg0.service
-
 #Copy wg-quick config
 cp wg0.conf /etc/wireguard/
 
