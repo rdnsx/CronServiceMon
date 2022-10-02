@@ -7,7 +7,7 @@ echo "###################################"
 sleep 3
 echo
 echo 
-echo "Updating system..."
+echo "\e[1mUpdating system...\e[0m"
 echo 
 echo
 sleep 2
@@ -17,7 +17,7 @@ apt update && apt upgrade -y && apt autoremove -y
 
 echo
 echo 
-echo "Installing WireGuard..."
+echo "\e[1mInstalling WireGuard...\e[0m"
 echo 
 sleep 3
 echo
@@ -26,7 +26,7 @@ echo
 apt install wireguard -y
 echo
 echo 
-echo "Generating keys..."
+echo "\e[1mGenerating keys...\e[0m"
 echo 
 sleep 3
 wg genkey | sudo tee /etc/wireguard/private.key
@@ -41,8 +41,8 @@ cp wg0.conf /etc/wireguard/
 echo
 echo
 echo "##############################################"
-echo "##############################################"
-echo "Please enter these WireGuard Client IP/Subnet:"
+echo
+echo "\e[1mPlease enter these WireGuard Client IP/Subnet:\e[0m"
 read WGIP
 sed -i '3i\Address = '"$WGIP" /etc/wireguard/wg0.conf
 
@@ -52,9 +52,8 @@ sed -i '4i\PrivateKey = '"$PKEY" /etc/wireguard/wg0.conf
 
 # Shows public.key
 echo
-echo
 echo "#################################"
-echo "Here is these clients public key:"
+echo "\e[1mHere is these clients public key:\e[0m"
 
 sleep 3
 echo 
@@ -63,12 +62,14 @@ cat /etc/wireguard/public.key
 echo
 echo
 echo "#################################"
-read -p "Press [Enter] to continue..."
+echo
+echo
+read -p "\e[1mPress [Enter] to continue...\e[0m"
 
 # Setup WireGuard monitoring service
 echo
 echo
-echo "Setup WireGuard Monitoring..."
+echo "\e[1mSetup WireGuard Monitoring...\e[0m"
 echo
 sleep 3
 cp monitor_wireguard_tunnel.sh /etc/wireguard/
@@ -77,7 +78,7 @@ chmod +x /etc/wireguard/monitor_wireguard_tunnel.sh
 (crontab -l 2>/dev/null; echo "* * * * * /etc/wireguard/monitor_wireguard_tunnel.sh 192.168.1.1") | crontab -
 
 echo
-echo "#####"
-echo "DONE!"
-echo "#####"
+echo "###########"
+echo "###\e[1mDONE!\e[0m###"
+echo "###########"
 echo
