@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo
-echo "RDNSX System Provisioning"
+echo "RDNSX WireGuard Installation Script"
 sleep 3
 echo
 echo "Updating system"
