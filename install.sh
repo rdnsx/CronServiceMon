@@ -60,14 +60,20 @@ echo
 echo "###################################"
 cat /etc/wireguard/public.key
 echo "###################################"
-echo
 pause
 
 # Setup WireGuard monitoring service
 echo
+echo "##########################"
 echo "Setup WireGuard Monitoring"
+echo "##########################"
 sleep 3
 cp monitor_wireguard_tunnel.sh /etc/wireguard/
 chmod +x /etc/wireguard/monitor_wireguard_tunnel.sh
 #Set crontab
 (crontab -l 2>/dev/null; echo "* * * * * /monitor_wireguard_tunnel.sh 192.168.1.1") | crontab -
+
+echo
+echo "#####"
+echo "DONE!"
+echo "#####"
