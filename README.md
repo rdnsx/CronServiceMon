@@ -7,7 +7,7 @@ Switch user to root:<br>
 ```sudu su``` 
 
 Clone this repository:<br>
-```git clone https://github.com/rdnsx/CronServiceMon.git``` 
+```git clone https://github.com/rdnsx/WireGuard-Setup-Agent.git``` 
 
 Make it executeable:<br>
 ```chmod +x install.sh```
