@@ -1,5 +1,5 @@
 # RDNSX - WireGuard Setup Agent
-Script to install, setup, monitor and restart wireguard if its not running.
+Script to install, setup, monitor and restart WireGuard if its not running.
 
 # How to use
 
