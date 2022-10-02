@@ -9,16 +9,5 @@ Switch user to root:<br>
 Clone this repository:<br>
 ```git clone https://github.com/rdnsx/WireGuard-Setup-Agent.git``` 
 
-Cange Dir, make it executeable and run:<br>
+Change Dir, make it executeable and run:<br>
 ```cd WireGuard-Setup-Agent/ && chmod +x install.sh && ./install.sh```
-
-<br>
-# For Troubleshooting
-
-Open Crontab:<br>
-```crontab -e```
-
-Add the following into crontab and replace <...> with the WireGuard Server IP adress.<br> 
-```* * * * * /root/monitor_wireguard_tunnel.sh <WIREGUARD SERVER IP>```<br>
-
-"* * * * *" runs the script at every minute. If you need to costumize it, check https://crontab.guru/
