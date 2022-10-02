@@ -12,6 +12,9 @@ Clone this repository:<br>
 Make it executeable:<br>
 ```chmod +x monitor_wireguard_tunnel.sh```
 
+#For Troubleshooting
+
+
 Open Crontab:<br>
 ```crontab -e```
 
