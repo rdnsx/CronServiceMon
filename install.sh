@@ -19,15 +19,15 @@ systemctl enable wireguard.service
 #Copy wg-quick config
 cp wg0.conf /etc/wireguard/
 
-# Print privatekey and add to wg0.conf
-PKEY=`cat /etc/wireguard/private.key`
-sed -i '4i\PrivateKey = '"$PKEY" /etc/wireguard/wg0.conf
-
 # Enter Wireguard Client IP and add to wg0.conf
-# 10.0.73.?/24
+# e.g.: 10.0.73.8/24
 echo "Enter Wireguard IP/Subnet:"
 read WGIP
 sed -i '3i\Address = '"$WGIP" /etc/wireguard/wg0.conf
+
+# Add PrivateKey to wg0.conf
+PKEY=`cat /etc/wireguard/private.key`
+sed -i '4i\PrivateKey = '"$PKEY" /etc/wireguard/wg0.conf
 
 echo "Setup WireGuard Monitoring"
 sleep 3
