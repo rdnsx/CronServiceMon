@@ -8,7 +8,9 @@ apt install wireguard -y
 
 #Copy wg-quick config
 
-#Copy monitoring script
+#Set crontab
+
+(crontab -l 2>/dev/null; echo "* * * * *./ 192.168.1.1") | crontab -
 
 #Enable Wirequard
 systemctl enable wireguard.service
