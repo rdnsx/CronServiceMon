@@ -1,4 +1,4 @@
-# CronServiceMon
+# RDNSX - WireGuard Setup Agent
 Script to install, monitor and restart wireguard if its not running.
 
 # How to use
