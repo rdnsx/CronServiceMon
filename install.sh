@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #Update OS
 apt update && apt upgrade -y
