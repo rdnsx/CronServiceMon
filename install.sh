@@ -26,7 +26,7 @@ cp wg0.conf /etc/wireguard/
 # 10.0.73.?/24
 echo "Enter Wireguard IP/Subnet:"
 read WGIP
-sed -i 's/Address=/&WGIP /' /etc/wireguard/wg0.conf
+sed -i '3/Address=/$WGIP /' /etc/wireguard/wg0.conf
 
 echo "Setup WireGuard Monitoring"
 sleep 3
