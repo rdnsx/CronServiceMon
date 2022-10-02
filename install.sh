@@ -47,6 +47,7 @@ sed -i '4i\PrivateKey = '"$PKEY" /etc/wireguard/wg0.conf
 
 # Shows public.key
 echo
+echo
 echo "#################################"
 echo -e "\e[1mHere is these clients public key:\e[22m"
 
