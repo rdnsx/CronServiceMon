@@ -10,7 +10,7 @@ Clone this repository:<br>
 ```git clone https://github.com/rdnsx/WireGuard-Setup-Agent.git``` 
 
 Make it executeable:<br>
-```chmod +x install.sh```
+```cd WireGuard-Setup-Agent/ && chmod +x install.sh```
 
 Run:<br>
 ```./install.sh```
