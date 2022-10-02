@@ -2,7 +2,7 @@
 
 echo
 echo "###################################"
-echo "RDNSX WireGuard Installation Script"
+echo "\e[1mRDNSX WireGuard Installation Script\e[0m"
 echo "###################################"
 sleep 3
 echo
