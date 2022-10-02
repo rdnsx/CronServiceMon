@@ -1,5 +1,5 @@
 # CronServiceMon
-Script to monitor a service like wireguard and start if not running.
+Script to install, monitor and restart wireguard if its not running.
 
 # How to use
 
