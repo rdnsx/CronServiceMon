@@ -9,11 +9,9 @@ Switch user to root:<br>
 Clone this repository:<br>
 ```git clone https://github.com/rdnsx/WireGuard-Setup-Agent.git``` 
 
-Make it executeable:<br>
-```cd WireGuard-Setup-Agent/ && chmod +x install.sh```
+Cange Dir, make it executeable and run:<br>
+```cd WireGuard-Setup-Agent/ && chmod +x install.sh && ./install.sh```
 
-Run:<br>
-```./install.sh```
 <br>
 # For Troubleshooting
 
