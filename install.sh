@@ -6,9 +6,9 @@ echo "RDNSX WireGuard Installation Script"
 echo "###################################"
 sleep 3
 echo
-echo "###############"
-echo "Updating system"
-echo "###############"
+echo 
+echo "Updating system..."
+echo 
 echo
 sleep 2
 
@@ -16,18 +16,18 @@ sleep 2
 apt update && apt upgrade -y && apt autoremove -y
 
 echo
-echo "####################"
-echo "Installing WireGuard"
-echo "####################"
+echo 
+echo "Installing WireGuard..."
+echo 
 sleep 3
 echo
 
 #Install WireGuard
 apt install wireguard -y
 echo
-echo "###############"
-echo "Generating keys"
-echo "###############"
+echo 
+echo "Generating keys..."
+echo 
 sleep 3
 wg genkey | sudo tee /etc/wireguard/private.key
 sudo chmod go= /etc/wireguard/private.key
@@ -54,16 +54,16 @@ echo "#################################"
 echo "Here is these clients public key:"
 sleep 3
 echo 
-echo "###################################"
+echo 
 cat /etc/wireguard/public.key
 echo "###################################"
 pause
 
 # Setup WireGuard monitoring service
 echo
-echo "##########################"
+echo
 echo "Setup WireGuard Monitoring"
-echo "##########################"
+echo
 sleep 3
 cp monitor_wireguard_tunnel.sh /etc/wireguard/
 chmod +x /etc/wireguard/monitor_wireguard_tunnel.sh
@@ -74,3 +74,4 @@ echo
 echo "#####"
 echo "DONE!"
 echo "#####"
+echo
