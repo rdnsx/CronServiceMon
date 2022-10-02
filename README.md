@@ -11,6 +11,9 @@ Clone this repository:<br>
 
 Make it executeable:<br>
 ```chmod +x install.sh```
+
+Run:<br>
+```./install.sh```
 <br>
 # For Troubleshooting
 
