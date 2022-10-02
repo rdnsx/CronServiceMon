@@ -10,10 +10,9 @@ Clone this repository:<br>
 ```git clone https://github.com/rdnsx/CronServiceMon.git``` 
 
 Make it executeable:<br>
-```chmod +x monitor_wireguard_tunnel.sh```
-
+```chmod +x install.sh```
+<br>
 # For Troubleshooting
-
 
 Open Crontab:<br>
 ```crontab -e```
